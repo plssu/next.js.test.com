@@ -6,6 +6,7 @@ import Todo from "./components/Todo/Todo";
 import { CustomButton } from "./components/CustomButton/CustomButton";
 import { CoursesList } from "./components/CoursesList/CoursesList";
 import { BypassCard } from "./components/BypassCard/BypassCard";
+import Checkbox from "./components/Checkbox/Ceckbox";
 
 export default function Home() {
   return (
@@ -13,22 +14,30 @@ export default function Home() {
       <CoursesList />
       <CustomButton />  
         <h1>3 tviani kursi</h1>
-        <button 
-        title='kursis shedzena' 
-        icon="icon.png" 
-        />
+        <button title='kursis shedzena' />Buy course
       <div className={styles.center}> 
 
         <div>
           <Button />
         </div>
+        {/* <div>
+          <ButtonImage />
+        </div> */}
         <div>
           <Inputext />
         </div>
         <div>
-          {/* <Todo /> */}
+          <Todo />
         </div>
-        <BypassCard />
+        <div>
+          <Checkbox />
+        </div>
+        <div className={styles.grid}>
+          <div><BypassCard /></div>
+          <div><BypassCard /></div>
+          <div><BypassCard /></div>
+        </div>
+      
       </div>
     </main>
   );

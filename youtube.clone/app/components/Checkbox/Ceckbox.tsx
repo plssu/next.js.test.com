@@ -1,30 +1,32 @@
 'use client';
 import { useState } from 'react';
 
-export default () => {
+const Checkbox = () => {
+    const [isChecked, setIsChecked] = useState(false);
 
-    const [showMenu, setShowMenu] = useState(false);
-
-    contst onChange = (e) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setIsChecked(e.target.checked);
-    }}
+    };
 
     return (
         <>
-            <div onClick=[onChange]
-            showMenu &&
-            <input type="checkbox"
-            checked={isChecked}
-            onChange={onChange}
+            <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={onChange}
             />
-            <h1>Menu</h1>
-            <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Contact Us</li>
-            </ul>
-            </>
-        }
-        
-    )
-}
+            {isChecked && (
+                <>
+                    <h1>Menu</h1>
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </>
+            )}
+        </>
+    );
+};
+
+export default Checkbox;

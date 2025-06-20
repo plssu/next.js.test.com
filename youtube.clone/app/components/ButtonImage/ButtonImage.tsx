@@ -1,8 +1,11 @@
 'use client'
 
-import { useState } from "react";
+type ButtonProps = {
+    icon: string;
+    title: string;
+};
 
-export const Button (props) => {
+export const ButtonImage = (props: ButtonProps) => {
     return (
         <div>
             <img src={props.icon} />

@@ -1,4 +1,6 @@
 .main {
+    display: flex;
+    flex-direction: column;
     width: 190px;
     background: #00ffa0;
     padding: 1rem;
@@ -7,6 +9,7 @@
     box-shadow: 0.4rem 0.4rem #05060f;
     overflow: hidden;
     color: black;
+    align-items: center;
 }
 .header {
     display: flex;
@@ -20,6 +23,10 @@
     font-size: 1.3rem;
     line-height: 1.25;
     font-weight: 700;
+}
+.priceWrapper {
+    display: flex;
+    
 }
 .priceNumber {
     display: flex;
@@ -41,7 +48,9 @@
 }
 .featuresList {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    padding: 0;
+    width: 100%;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
@@ -60,16 +69,10 @@
 
 .button::before {
   position: absolute;
-  content: attr(data-tooltip);
-  width: var(--tooltip-width);
-  height: var(--tooltip-height);
   background-color: #555;
   font-size: 0.9rem;
   color: #fff;
   border-radius: .25em;
-  line-height: var(--tooltip-height);
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-  left: calc(50% - var(--tooltip-width) / 2);
 }
 .button::after {
   position: absolute;
@@ -78,8 +81,6 @@
   height: 0;
   border: 10px solid transparent;
   border-top-color: #555;
-  left: calc(50% - 10px);
-  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
 }
 .button::after,.button::before {
   opacity: 0;
@@ -103,26 +104,8 @@
   justify-content: center;
 }
 .button:hover {
-  background: #222;
+  background: #d51818;
 }
-
-.button:hover .text {
-  top: -100%;
-}
-
-.button:hover .icon {
-  top: 0;
-}
-
-.button:hover:before,.button:hover:after {
-  opacity: 1;
-  visibility: visible;
-}
-
-.button:hover:after {
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-}
-
-.button:hover:before {
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+.button::after {
+  background: #00ffa0;
 }

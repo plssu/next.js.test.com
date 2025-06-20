@@ -10,3 +10,7 @@
     max-width: 800px;
     padding: 20px;
 }
+.grid {
+    display: flex;
+    gap: 20px;
+}
